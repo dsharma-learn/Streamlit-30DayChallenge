@@ -167,7 +167,22 @@ def day_11():
 # Day - 12
 #########################################
 def day_12():
-    st.header('Day 12 - TBD')
+    st.header('Day 12 - st.checkbox')
+
+    st.write('What would you like to order?')
+
+    icecream = st.checkbox('Ice cream')
+    coffee = st.checkbox('Coffee')
+    cola = st.checkbox('Cola')
+
+    if icecream:
+        st.write("Great! Here's some more 🍦")
+
+    if coffee:
+        st.write("Okay, here's some coffee ☕")
+
+    if cola:
+        st.write("Here you go 🥤")
 
 
 #########################################
