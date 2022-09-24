@@ -456,10 +456,12 @@ def day_22():
 #########################################
 def day_23():
     st.header('Day 23 - st.experimental_get_query_params')
-    
+
     with st.expander('About this app'):
-      st.write("`st.experimental_get_query_params` allows the retrieval of query parameters directly from the URL of the user's browser.")
-    
+        st.write(
+            "`st.experimental_get_query_params` allows the retrieval of query parameters directly from the URL of the user's browser."
+        )
+
     # 1. Instructions
     st.header('1. Instructions')
     st.markdown('''
@@ -469,27 +471,54 @@ def day_23():
     such that it becomes 
     `http://share.streamlit.io/dataprofessor/st.experimental_get_query_params/?firstname=Jack&surname=Beanstalk`
     ''')
-    
-    
+
     # 2. Contents of st.experimental_get_query_params
     st.header('2. Contents of st.experimental_get_query_params')
     st.write(st.experimental_get_query_params())
-    
-    
+
     # 3. Retrieving and displaying information from the URL
     st.header('3. Retrieving and displaying information from the URL')
-    
+
     firstname = st.experimental_get_query_params()['firstname'][0]
     surname = st.experimental_get_query_params()['surname'][0]
-    
-    st.write(f'Hello **{firstname} {surname}**, how are you?')  
+
+    st.write(f'Hello **{firstname} {surname}**, how are you?')
 
 
 #########################################
 # Day - 24
 #########################################
 def day_24():
-    st.header('Day 24 - TBD')
+    st.header('Day 24 - Caching')
+
+    st.title('st.cache')
+
+    # Using cache
+    a0 = time()
+    st.subheader('Using st.cache')
+
+    @st.cache(suppress_st_warning=True)
+    def load_data_a():
+        df = pd.DataFrame(np.random.rand(2000000, 5),
+                          columns=['a', 'b', 'c', 'd', 'e'])
+        return df
+
+    st.write(load_data_a())
+    a1 = time()
+    st.info(a1 - a0)
+
+    # Not using cache
+    b0 = time()
+    st.subheader('Not using st.cache')
+
+    def load_data_b():
+        df = pd.DataFrame(np.random.rand(2000000, 5),
+                          columns=['a', 'b', 'c', 'd', 'e'])
+        return df
+
+    st.write(load_data_b())
+    b1 = time()
+    st.info(b1 - b0)
 
 
 #########################################
