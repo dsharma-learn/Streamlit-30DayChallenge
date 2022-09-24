@@ -139,7 +139,7 @@ def day_08():
     # Example 6
     st.subheader('Example 06 - Double slider')
     slider_range = st.slider("Double ended Slider", value=[100,400])
-    st.info("Our Slider range has type %s ", %type(slider_range))
+    st.info("Our Slider range has type %s " %type(slider_range))
     st.write("Slider Range ", slider_range, slider_range[0],  slider_range[1])
 
     # Example 7
