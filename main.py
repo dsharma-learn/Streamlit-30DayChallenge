@@ -10,14 +10,14 @@ from datetime import time, datetime
 # Day - 01
 #########################################
 def day_01():
-    st.title("Streamlit App - 30 Day Challenge")
+    st.title("Day 01 - Streamlit App - 30 Day Challenge - using st.title")
 
 
 #########################################
 # Day - 02
 #########################################
 def day_02():
-    st.write('Hello world!')
+    st.write('Day 02 - Hello world! - Using st.write')
 
 
 #########################################
@@ -35,6 +35,8 @@ def day_03():
 #########################################
 # Day - 04 - long video from Ken Jee
 #########################################
+def day_04():
+    st.header("Day 05 - Ken Jee's long video")
 
 
 #########################################
@@ -72,6 +74,20 @@ def day_05():
                                             color='c',
                                             tooltip=['a', 'b', 'c'])
     st.write(c)
+
+
+#########################################
+# Day - 06
+#########################################
+def day_06():
+    st.header("Day 06 - Uploading App to Github")
+
+
+#########################################
+# Day - 07
+#########################################
+def day_07():
+    st.header("Day 07 - Deploying app to Streamlit Cloud")
 
 
 #########################################
@@ -134,7 +150,25 @@ def day_10():
     st.write('Your favorite color is ', option)
 
 
+#########################################
+# Day - 11
+#########################################
+def day_11():
+    st.header('Day 11 - st.multiselect')
+
+    options = st.multiselect('What are your favorite colors',
+                             ['Green', 'Yellow', 'Red', 'Blue'],
+                             ['Yellow', 'Red'])
+
+    st.write('You selected:', options)
+
+
 ######################################################
 # MAIN
 ######################################################
-day_10()
+num = 11
+#day_11()
+
+myfunction = '{}_{:02}'.format("day", num)
+
+locals()[myfunction]()
