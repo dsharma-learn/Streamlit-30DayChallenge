@@ -39,6 +39,7 @@ def day_03():
 #########################################
 def day_04():
     st.header("Day 05 - Ken Jee's long video")
+    st.subheader("REMINDER: Complete this looong video")
 
 
 #########################################
@@ -128,6 +129,13 @@ def day_08():
                            format="MM/DD/YY - hh:mm")
     st.write("Start time:", start_time)
 
+    # Example 5
+    st.subheader('Example 05 - Select slider')
+    st.title("Streamlit Select Slider")
+    temp_options = ['low', 'medium', 'high']
+    temp = st.select_slider("Choose the temperature", options=temp_options)
+    st.write("The temperature of this :fire: is ", temp)
+
 
 #########################################
 # Day - 09
@@ -199,6 +207,7 @@ def day_13():
 #########################################
 def day_14():
     st.header('Day 14 - `streamlit_pandas_profiling`')
+    st.header('REMINDER: CREATING CUSTOM COMPONENTS')
 
     df = pd.read_csv(
         'https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv'
