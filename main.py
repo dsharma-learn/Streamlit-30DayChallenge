@@ -329,7 +329,7 @@ def day_18():
 def day_19():
     st.header('Day 19 - App Layout')
 
-    st.set_page_config(layout="wide")
+    #st.set_page_config(layout="wide")
 
     st.title('How to layout your Streamlit app')
 
