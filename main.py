@@ -4,7 +4,6 @@ import numpy as np
 import altair as alt
 import pandas as pd
 from datetime import time, datetime
-import pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
 
 
@@ -300,7 +299,9 @@ def day_16():
 # Day - 17
 #########################################
 def day_17():
-    st.header('Day 17 - TBD')
+    st.header('Day 17 - Secrets')
+    st.title('st.secrets')
+    st.write(st.secrets['message'])
 
 
 #########################################
