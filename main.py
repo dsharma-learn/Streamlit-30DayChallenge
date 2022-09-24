@@ -6,6 +6,8 @@ import pandas as pd
 from datetime import time, datetime
 from streamlit_pandas_profiling import st_profile_report
 
+from time import time as time_time
+
 
 #########################################
 # Day - 01
@@ -494,7 +496,7 @@ def day_24():
     st.title('st.cache')
 
     # Using cache
-    a0 = time()
+    a0 = time_time()
     st.subheader('Using st.cache')
 
     @st.cache(suppress_st_warning=True)
@@ -504,11 +506,11 @@ def day_24():
         return df
 
     st.write(load_data_a())
-    a1 = time()
+    a1 = time_time()
     st.info(a1 - a0)
 
     # Not using cache
-    b0 = time()
+    b0 = time_time()
     st.subheader('Not using st.cache')
 
     def load_data_b():
@@ -517,7 +519,7 @@ def day_24():
         return df
 
     st.write(load_data_b())
-    b1 = time()
+    b1 = time_time()
     st.info(b1 - b0)
 
 
