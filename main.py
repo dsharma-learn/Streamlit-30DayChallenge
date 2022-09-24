@@ -138,20 +138,22 @@ def day_08():
 
     # Example 6
     st.subheader('Example 06 - Double slider')
-    slider_range = st.slider("Double ended Slider", value=[100,400])
-    st.info("Our Slider range has type %s " %type(slider_range))
-    st.write("Slider Range ", slider_range, slider_range[0],  slider_range[1])
+    slider_range = st.slider("Double ended Slider", value=[100, 400])
+    st.info("Our Slider range has type %s " % type(slider_range))
+    st.write("Slider Range ", slider_range, slider_range[0], slider_range[1])
 
     # Example 7
     st.subheader('Example 07 - Non Numeric Double slider')
-    rainbow=['Voilet','Indigo','Blue','Green','Yellow','Orange','Red']
-    start_color, end_color = st.select_slider("Select a range of colors from rainbow: ", options=rainbow, value=('Orange', 'rainbow'))
-    st.info("Our Colors have type %s" %type(start_color))
+    rainbow = ['Voilet', 'Indigo', 'Blue', 'Green', 'Yellow', 'Orange', 'Red']
+    start_color, end_color = st.select_slider(
+        "Select a range of colors from rainbow: ",
+        options=rainbow,
+        value=('Indigo', 'Orange'))
+    st.info("Our Colors have type %s" % type(start_color))
+
+    st.write("you chose: ", start_color, " to ", end_color)
 
 
-    st.write("you chose: ", start_color, " to ", end_color )
-
-  
 #########################################
 # Day - 09
 #########################################
