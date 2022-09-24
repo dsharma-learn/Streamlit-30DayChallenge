@@ -122,7 +122,19 @@ def day_09():
     st.line_chart(chart_data)
 
 
+#########################################
+# Day - 10
+#########################################
+def day_10():
+    st.header('Day 10 - st.selectbox')
+
+    option = st.selectbox('What is your favorite color?',
+                          ('Blue', 'Red', 'Green'))
+
+    st.write('Your favorite color is ', option)
+
+
 ######################################################
 # MAIN
 ######################################################
-day_09()
+day_10()
