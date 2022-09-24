@@ -277,7 +277,7 @@ def day_15():
 # Day - 16
 #########################################
 def day_16():
-    st.header('Day 16 - Theme Customization')
+    st.header('Day 16 - Theme Customization ')
     st.title('Customizing the theme of Streamlit apps')
 
     st.write('Contents of the `.streamlit/config.toml` file of this app')
