@@ -27,11 +27,24 @@ def day_02():
 #########################################
 def day_03():
     st.header('Day 03 - st.button')
+    st.subheader("Example 01 ")
 
     if st.button('Say hello'):
         st.write('Why hello there')
     else:
         st.write('Goodbye')
+
+    st.subheader("Example 02 ")
+    smile = st.button("Smile")
+    cry = st.button("Cry")
+
+    if smile:
+        cry = False
+        st.write(":smile:")
+
+    if cry:
+        smile = False
+        st.write(":cry:")
 
 
 #########################################
