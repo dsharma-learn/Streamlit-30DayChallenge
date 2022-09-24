@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import altair as alt
 import pandas as pd
+from datetime import time, datetime
 
 
 #########################################
@@ -37,7 +38,7 @@ def day_03():
 
 
 #########################################
-# Day - 03
+# Day - 05
 #########################################
 def day_05():
     st.header('st.write: Day 05')
@@ -73,8 +74,45 @@ def day_05():
     st.write(c)
 
 
+#########################################
+# Day - 06
+#########################################
+def day_06():
+
+    st.header('st.slider: Day 06')
+
+    # Example 1:
+    st.subheader("Slider")
+
+    age = st.slider("How old are you?", 0, 130, 25)
+    st.write("I am ", age, " years old")
+
+    # Example 2:
+    st.subheader("Range Slider")
+    values = st.slider("Select Range of values: ", 0.0, 100.0, (25.0, 75.0))
+
+    st.write('Values:', values)
+
+
+  # Example 3
+  
+  st.subheader('Range time slider')
+  
+  appointment = st.slider("Schedule your appointment:",
+                          value=(time(11, 30), time(12, 45)))
+  st.write("You're scheduled for:", appointment)
+  
+  # Example 4
+  
+  st.subheader('Datetime slider')
+  
+  start_time = st.slider("When do you start?",
+                         value=datetime(2020, 1, 1, 9, 30),
+                         format="MM/DD/YY - hh:mm")
+  st.write("Start time:", start_time)
+
 ######################################################
 # MAIN
 ######################################################
 
-day_05()
+day_06()
