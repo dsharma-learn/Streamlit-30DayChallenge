@@ -24,7 +24,7 @@ def day_02():
 # Day - 03
 #########################################
 def day_03():
-    st.header('st.button')
+    st.header('Day 03 - st.button')
 
     if st.button('Say hello'):
         st.write('Why hello there')
@@ -41,7 +41,7 @@ def day_03():
 # Day - 05
 #########################################
 def day_05():
-    st.header('st.write: Day 05')
+    st.header('Day 05  - st.write ')
 
     # Example 1
 
@@ -75,11 +75,11 @@ def day_05():
 
 
 #########################################
-# Day - 06
+# Day - 08
 #########################################
-def day_06():
+def day_08():
 
-    st.header('st.slider: Day 06')
+    st.header('Day 08 - st.slider')
 
     # Example 1:
     st.subheader("Slider")
@@ -111,8 +111,18 @@ def day_06():
     st.write("Start time:", start_time)
 
 
+#########################################
+# Day - 09
+#########################################
+def day_09():
+    st.header('Day 09 - Line chart')
+
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=['a', 'b', 'c'])
+
+    st.line_chart(chart_data)
+
+
 ######################################################
 # MAIN
 ######################################################
-
-day_06()
+day_09()
