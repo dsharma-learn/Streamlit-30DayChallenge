@@ -27,6 +27,8 @@ def day_02():
 #########################################
 def day_03():
     st.header('Day 03 - st.button')
+    st.subheader("REMINDER: NESTED BUTTONS WITH CHECKBOXES")
+
     st.subheader("Example 01 ")
 
     if st.button('Say hello'):
@@ -60,6 +62,9 @@ def day_04():
 #########################################
 def day_05():
     st.header('Day 05  - st.write ')
+    st.subheader(
+        "REMINDER: Video from KEn Jee - https://docs.streamlit.io/library/api-reference/write-magic/st.write"
+    )
 
     # Example 1
 
@@ -172,6 +177,9 @@ def day_08():
 #########################################
 def day_09():
     st.header('Day 09 - Line chart')
+    st.subheader(
+        "REMINDER: https://docs.streamlit.io/library/api-reference/charts/st.altair_chart"
+    )
 
     chart_data = pd.DataFrame(np.random.randn(20, 3), columns=['a', 'b', 'c'])
 
@@ -237,7 +245,13 @@ def day_13():
 #########################################
 def day_14():
     st.header('Day 14 - `streamlit_pandas_profiling`')
-    st.header('REMINDER: CREATING CUSTOM COMPONENTS')
+    st.subheader(
+        'REMINDER: CREATING CUSTOM COMPONENTS: https://docs.streamlit.io/library/components/create'
+    )
+
+    st.subheader(
+        'REMINDER: Component List: https://discuss.streamlit.io/t/streamlit-components-community-tracker/4634'
+    )
 
     df = pd.read_csv(
         'https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv'
@@ -251,7 +265,13 @@ def day_14():
 # Day - 15
 #########################################
 def day_15():
-    st.header('Day 15 - TBD')
+    st.header('Day 15 - st.latex')
+
+    st.latex(r'''
+         a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+         \sum_{k=0}^{n-1} ar^k =
+         a \left(\frac{1-r^{n}}{1-r}\right)
+         ''')
 
 
 #########################################
@@ -300,7 +320,7 @@ def day_21():
 # Day - 22
 #########################################
 def day_22():
-    st.header('Day 22 - TBD')
+    st.header('Day 22 - TBD ')
 
 
 #########################################
@@ -362,7 +382,7 @@ def day_30():
 ######################################################
 # MAIN
 ######################################################
-num = st.slider("How old are you?", 1, 30, 10)
+num = st.slider("Pick the day ... ", 1, 30, 10)
 
 myfunction = '{}_{:02}'.format("day", num)
 
